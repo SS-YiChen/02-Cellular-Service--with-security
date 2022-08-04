@@ -1,0 +1,45 @@
+<h2>Personal Information</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.gender}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div></div>
+<hr/>
+<div></div>
+
+<h3>Device And Phone</h3>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let device of devices">
+            <td>{{device.name}}</td>
+            <td>{{device.number}}</td>
+            <td>
+                <button (click) = "updateDevice(device.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteDevice(device.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

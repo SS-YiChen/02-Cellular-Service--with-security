@@ -1,0 +1,22 @@
+<h3>Purchased Plan List</h3>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Plan Name</th>
+            <th>Monthly Price</th>
+            <th>Device Limit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let plan of plans">
+            <td>{{plan.planName}}</td>
+            <td>{{plan.price}}</td>
+            <td>{{plan.deviceLimit}}</td>
+            <td>
+                <button (click) = "deleteUserPlan(plan.userPlanId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
